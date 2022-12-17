@@ -1,0 +1,9 @@
+定义：将一个类的对象换成客服端希望的另一个接口，使得原本由于接口不兼容而不能一起工作的那类能一起工作
+结构：
+目标接口
+适配者类
+适配器类
+
+JDK源码解析
+Reader(字符流)、Inputstream(字节流）的适配使用的是就是InputstreamReader.
+inputSreamReader继承自java.io包中的reader，对他中的抽象的未实现的方法给出实现

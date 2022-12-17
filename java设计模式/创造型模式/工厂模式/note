@@ -1,0 +1,9 @@
+工厂模式的JDK源码分析
+在collection.iterator方法中使用到了工厂模式
+collection接口是抽象工厂类，arraylist是具体工厂类。
+iterator接口是抽象商品类
+arraylist类中的iter内部类是具体的商品类，在具体的工厂类中iterator()方法创建具体商品类的对象
+
+除此之外
+dateforamt类中的getinstance()方法使用的是工厂模式
+calendar类中的getInstance()方法使用的是工厂模式
