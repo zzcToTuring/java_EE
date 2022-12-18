@@ -6,7 +6,6 @@ public class test {
         TrueMediator trueMediator=new TrueMediator();
         //构建房主
         HouseOwn houseOwn1=new HouseOwn("张三-房东",trueMediator);
-
         //构建租房者
         tenant tenant1=new tenant("李四-租客",trueMediator);
 
