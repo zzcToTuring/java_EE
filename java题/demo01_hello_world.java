@@ -1,5 +1,3 @@
-
-
 public class demo01_hello_world {
     public static void main(String[] args) {
         int a = 0;
@@ -9,7 +7,6 @@ public class demo01_hello_world {
             a++;
         }
     }
-
     private static void show() {
         System.out.println("show 断点");
         System.out.println("输出1");

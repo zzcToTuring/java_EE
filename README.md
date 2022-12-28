@@ -8,6 +8,7 @@
  #### Q1 在不改变指针变量的情况下修改字符串S的值
  #### Q2 ArrayList和LinkedList的区别
  #### Q3 HashMap的put方法
+ #### Q4 手写冒泡排序 
 
 ## part3 idea使用版块
  如今idea已经占据java开发的75%的份额，19年入学的大学生，最先使用的编译器的eclipse，因此在转向idea时候有一些不熟悉
@@ -167,5 +168,6 @@ Javadoc用于描述类或者方法的作用。Javadoc可以写在类上面和方
 
 快速生成get与set方法
 
-
+## part4 java基础
+ 由于内容较多，java基础配置有专门的readme.md文档，在其相关的文件夹中可进行查阅
 
