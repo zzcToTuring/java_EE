@@ -15,6 +15,7 @@ public class a4TreeSet {
          *      对字符，字符串类型：按照字符在ASCII码表中的数字升序进行排序
          *      ）
          *  2、比较器排序：创建treeSet对象时候，传递比较器comparator指定规则
+         *  如果在代码中既有第一种也有第二种，默认以第二种为准
          *
          *  treeSet方法返回值的特点：
          *    return
