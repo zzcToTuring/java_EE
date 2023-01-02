@@ -13,6 +13,7 @@ public class a3HashMap {
          *  4、依赖hashCode方法和equals方法确保键的唯一。
          *      如果键存储的是自定义对象，需要重写hashCode和equals方法
          *      如果值存储自定义对象，不需要重写hashCode和equals方法
+         *  底层源码的学习：https://www.bilibili.com/video/BV1yW4y1Y7Ms?p=14
          */
         Map<String,Integer> map=new HashMap<>();
         map.put("zhangsan",20);

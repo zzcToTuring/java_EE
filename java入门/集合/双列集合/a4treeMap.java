@@ -8,6 +8,8 @@ public class a4treeMap {
          *  与TreeSet排序方式相同
          *  1、实现comparable接口，指定比较规则
          *  2、创建集合时传递comparator比较器对象，指定比较规则
+         *
+         *  底层源码的学习：https://www.bilibili.com/video/BV1yW4y1Y7Ms?p=58
          */
     }
 }

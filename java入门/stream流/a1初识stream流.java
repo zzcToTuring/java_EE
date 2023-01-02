@@ -1,6 +1,7 @@
 package stream流;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 
 public class a1初识stream流 {
     public static void main(String[] args) {
@@ -40,6 +41,14 @@ public class a1初识stream流 {
 
         //使用stream的方法
         list1.stream().filter(name->name.startsWith("张")).filter(name->name.length()==3).forEach(System.out::println);
-
+        //stream流的原始方法
+        list1.stream().forEach(new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                if (s.startsWith("张")&&s.length()==3){
+                    System.out.println("s-->"+s);
+                }
+            }
+        });
     }
 }
