@@ -14,6 +14,13 @@ public class a3fileList方法 {
          * （了解）public File[] listFiles(FileFilter filter)      利用文件名过滤器获取当前该路径下所有内容
          * （了解）public File[] listFiles(FilenameFilter filter)  利用文件名过滤器获取当前该路径下所有内容
          */
+        /**
+         * 关于public File[] listFiles()的注意点：
+         *  1、当调用者file表示的路径不存在或者是文件时，返回null
+         *  2、当调用者file表示的路径是一个空文件夹时，返回一个长度为0的数组
+         *  3、当调用者file表示的路径是需要权限才能访问的文件夹时，返回null
+         *  4、当调用者file表示的路径是一个有内容的文件夹时，将里面所有文件和文件夹的路径放在file数组中返回(同样的也包括windows隐藏文件)
+         */
         File f1=new File("D:\\java_code\\java_EE\\java入门\\file\\temp");
         //列出所有系统可用的根
         File[] arr1 = File.listRoots();
