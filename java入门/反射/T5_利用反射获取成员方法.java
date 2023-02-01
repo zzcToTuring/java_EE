@@ -38,6 +38,8 @@ public class T5_利用反射获取成员方法 {
         eat.invoke(s        //参数的调用者
                 ,"面包"//参数的实际对象
         );
+        //获取返回值类型
+        System.out.println(eat.getReturnType());
 
     }
 
