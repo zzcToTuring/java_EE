@@ -15,7 +15,8 @@ public class ProxyUtil {
         */
         Object o = Proxy.newProxyInstance(
                 ProxyUtil.class.getClassLoader(),//参数一，用于指定用哪个类加载器，一般都是固定的写法
-                new Class[] {Star.class},//指定接口，这些接口用于指定生成什么代理，可以有很多因此写成数组
+                star.getClass().getInterfaces(),
+                //new Class[] {Star.class},//指定接口，这些接口用于指定生成什么代理，可以有很多因此写成数组
                 //参数3，用来指定生成代理对象要干嘛
                 new InvocationHandler() {
                     @Override

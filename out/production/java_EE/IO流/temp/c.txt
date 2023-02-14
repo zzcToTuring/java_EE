@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class temp {
+    public static void main(String[] args) {
+        Collection<String> c=new HashSet<>();
+        c.add("test1");
+        c.add("test2");
+        c.add("test3");
+        Iterator<String> it=c.iterator();
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
+    }
+}

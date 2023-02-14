@@ -12,6 +12,9 @@ public class a1介绍 {
          * Apache Commons是Apache软件基金会的项目，其中的Commons是一个工具类，里面有很多方便实用的工具类
          * 在io领域，我们介绍一下常用io的工具类--->有相关的.md文件作为参考
          *
+         * 先前操作：
+         *  获取jar包，在lib中进行添加操作 (添加为库)
+         *
          * 常见的操作
          *  FileUtils类
          *           static void copyFile(File srcFile, File destFile)                   复制文件

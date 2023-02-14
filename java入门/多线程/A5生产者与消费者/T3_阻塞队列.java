@@ -17,6 +17,7 @@ public class T3_阻塞队列 {
 }
 class cook_Q extends Thread{
     //公用的队列
+    int count=10;
     ArrayBlockingQueue<String> queue;
 
     public cook_Q(ArrayBlockingQueue<String> queue) {
@@ -26,8 +27,13 @@ class cook_Q extends Thread{
     public void run(){
         while (true){
             try {
+                if (count==0){
+                    break;
+                }
                 queue.put("面条");
                 System.out.println("厨师放了一碗面条");
+                count--;
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -46,7 +52,7 @@ class food_Q extends Thread{
         while (true){
             try {
                 String take = queue.take();
-                System.out.println(take);
+                System.out.println("顾客拿走："+take);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
