@@ -36,3 +36,6 @@
         System的父加载器为Platform
         Platform的父加载器为Bootstrap
 
+5、类加载器的方法名
+    static ClassLoader getSystemClassLoader() 获取系统类加载器
+    InputStream getResourceAsStream(String name)  加载某一个资源文件
