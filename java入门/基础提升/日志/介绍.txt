@@ -1,0 +1,44 @@
+1、作用
+    跟输出语句一样，可以把程序在运行过程中的详细信息都打印在控制台上。
+    同时，利用log日志还可以把这些详细信息保存到文件和数据库中。
+
+2、体系介绍
+    规范接口：Commons Logging(JCL)  Simple Logging Facade for java (slf4j)
+            一些接口，提供管理日志实现框架设计的标准
+    日志框架：
+            大佬已经做好的日志记录实现代码，后来者可以直接拿去使用
+    常见的日志框架：
+             Log4J Logback(因为对log4J的性能不满意所以才诞生的)
+
+3、Logback日志框架介绍：
+    基于slf4j的日志规范实现的框架，性能比之前使用的log4j更好
+    官网：https://logback.qos.ch/index.html
+
+4、快速入门
+    1--在项目中导入相关的jar包依赖(三个都需要)
+    2--将核心配置文件logback.xml放入在src目录下
+    3--在代码中获取日志的对象
+    4--调用日志的方法记录日志的信息
+
+5、xml文件的配置讲解
+    1--输出位置
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">  输出在控制台
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">   输出在文件中
+
+    2--pattern日志内容
+        <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level]  %c [%thread] : %msg%n</pattern>
+        表示               时间             级别(5表示展示5位)  类名  线程         日志内容
+
+    3、file输出路径
+        <file>D:\java_code\java_EE\java入门\基础提升\日志\out\data.log</file>
+
+    4、root总开关
+        <root level="info">   指定级别info
+                <appender-ref ref="CONSOLE"/>   使用console在控制台输出
+                <appender-ref ref="FILE" />    使用file在文件中输出(appender name="FILE"指定)
+        </root>
+
+    5、日志级别
+        TRACE, DEBUG, INFO, WARN, ERROR 默认debug
+        ALL：所有的都记录
+        OFF：关闭所有的记录
