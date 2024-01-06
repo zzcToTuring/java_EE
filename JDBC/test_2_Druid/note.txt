@@ -1,0 +1,20 @@
+使用JDBC可能存在的不足：
+    1、不使用数据库连接池，每次都通过DriverManager获取新连接，用完直接抛弃断开，连接的利用率太低，太浪费。
+    2、对于数据库服务器来说，压力太大了。我们数据库服务器和Java程序对连接数也无法控制，很容易导致数据库服务器崩溃
+
+解决：使用连接池，在众多的连接池中，使用Druid
+
+连接方式
+    1：硬编码方式
+        直接在代码中写出
+    2：软编码方式
+        通过外部配置文件配置好，在java程序中进行读取
+
+思考：
+    1、多个查询条件时，通常使用in类型操作；若未知有多少个?那么该如何处理，同时字符串可能包括引号
+    2、在EIP中，如何使用预编译connection.prepareStatement(sql)
+        PS，现在用的比较多的是 replace替换sql后直接执行
+    3、参考EIP中相关机器人结点写法，使用connection.prepareCall方式执行存储过程
+    4、在EIP中 DataSet ds=new DataSet("EIP")的作用
+        PS：相当于connect
+        举例：ds.preSatexxx || PreparedStatement preparedStatement = connection.prepareStatement(sql);
